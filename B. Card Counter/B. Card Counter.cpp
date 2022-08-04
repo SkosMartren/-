@@ -9,15 +9,12 @@ int maxSum(const vector<size_t>& v, int n, int k) {
     int res = 0;
     for (int i = 0; i < k; ++i){
         res += v[i];
-        //cout << "not error!";
     }
 
     int curr_sum = res;
     for (int i = k; i < n; ++i) {
         curr_sum += v[i] - v[i - k];
-        //cout << " error!";
         res = max(res, curr_sum);
-        //cout << "NOT!";
     }
     
     return res;
