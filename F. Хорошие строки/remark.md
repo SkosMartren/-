@@ -15,7 +15,7 @@
 
 using namespace std;
 
-bool areBracketsBalanced(string expr) {
+bool areBracketsBalanced(const string& expr) {
     stack<char> temp;
 
     for (int i = 0; i < expr.length(); i++) { // for(const char c : expr) {
@@ -49,3 +49,5 @@ int main() {
     return 0;
 }
 ```
+\
+Также на основе этого решения можно легко решить такую задачу: Удалить соседение символы из строки, которые в ascii отстают меньше, чем на x
